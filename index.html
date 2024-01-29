@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP연습</title>
+    <link rel="stylesheet" href="./styles/design.css">
+</head>
+<body>
+    <?php include("./header.php") ?>
+    <main>
+        <section>
+            <h2>메인페이지</h2>
+            <div id="map">
+            </div>
+        </section>
+    </main>
+    <?php include("./footer.php") ?>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=73aa3724166673e75b2bac19e8da2356"></script>
+    <script>
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(37.493143, 126.722690), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        var markerPosition  = new kakao.maps.LatLng(37.493143, 126.722690);
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+    </script>
+</body>
+</html>

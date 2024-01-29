@@ -1,0 +1,14 @@
+html, body {background-color: lightgreen;}
+header {
+    max-width:1200px; margin: 0 auto; height: 100px;
+    background-color: yellow;
+}
+footer {
+    max-width: 1000px; margin: 0 auto; height: 80px;
+    background: pink;
+}
+main {background: lightsalmon;}
+main #map {width:600px; height: 450px; background: gray;}
+main .board iframe {
+    width: 100%; height: 1000px;
+}
